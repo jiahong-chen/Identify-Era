@@ -1,0 +1,4 @@
+<RCC>
+    <qresource prefix="QT_yolov2_Console">
+    </qresource>
+</RCC>
