@@ -177,7 +177,7 @@ QT_yolov2_Console::QT_yolov2_Console(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-
+	QMainWindow::showFullScreen();
 	load_yolo_ini("./yolo_data/cfgs/tiny-yolo-voc.cfg");
 	yolo_reload(0);
 

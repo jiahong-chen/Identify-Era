@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QT_indexClass</class>
+ <widget class="QMainWindow" name="QT_indexClass">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Identify Era</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>-1</number>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(&quot;robot.png&quot;)
+</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>280</y>
+      <width>1060</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Spacer</family>
+      <pointsize>84</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(&quot;&quot;);
+color: rgba(255,255,255,0.8);</string>
+    </property>
+    <property name="text">
+     <string>IDENTIFY ERA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="detection_clk">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>450</y>
+      <width>500</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(&quot;&quot;);
+border-radius:60px;
+border: 7px solid #FFFFFF;
+color:rgba(255,255,255,1)</string>
+    </property>
+    <property name="text">
+     <string>OBJECT DETECTION</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="classifier_clk">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>625</y>
+      <width>500</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(&quot;&quot;);
+border-radius:60px;
+border: 7px solid #FFFFFF;
+color:rgba(255,255,255,1)</string>
+    </property>
+    <property name="text">
+     <string>OBJECT CLASSIFIER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>800</y>
+      <width>500</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(&quot;&quot;);
+border-radius:60px;
+border: 7px solid #FFFFFF;
+color:rgba(255,255,255,1)</string>
+    </property>
+    <property name="text">
+     <string>EXIT</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

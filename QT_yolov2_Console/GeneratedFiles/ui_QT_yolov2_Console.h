@@ -18,10 +18,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -38,9 +35,6 @@ public:
     QLineEdit *line_cfg;
     QPushButton *start_button;
     QLabel *label;
-    QMenuBar *menuBar;
-    QToolBar *mainToolBar;
-    QStatusBar *statusBar;
 
     void setupUi(QMainWindow *QT_yolov2_ConsoleClass)
     {
@@ -128,16 +122,6 @@ public:
         label->setFont(font);
         label->setStyleSheet(QStringLiteral("color:#FFFFFF"));
         QT_yolov2_ConsoleClass->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(QT_yolov2_ConsoleClass);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1920, 25));
-        QT_yolov2_ConsoleClass->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(QT_yolov2_ConsoleClass);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        QT_yolov2_ConsoleClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(QT_yolov2_ConsoleClass);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        QT_yolov2_ConsoleClass->setStatusBar(statusBar);
 
         retranslateUi(QT_yolov2_ConsoleClass);
 
