@@ -183,7 +183,7 @@ QT_yolov2_Console::QT_yolov2_Console(QWidget *parent)
 
 	connect(ui.file_button, SIGNAL(clicked()), this, SLOT(file_ck()));
 	connect(ui.cfgfile_button, SIGNAL(clicked()), this, SLOT(cfgfile_ck()));
-	connect(ui.start_button, SIGNAL(clicked()), this, SLOT(start()));
+	connect(ui.start, SIGNAL(clicked()), this, SLOT(start()));
 
 }
 
@@ -321,3 +321,10 @@ void QT_yolov2_Console::progressbar(QProgressDialog *progressDlg) {
 		_sleep(10);
 	}
 }
+
+/*void QT_yolov2_Console::receiveshow() {
+	hide();
+	emit go_back;
+
+	//this->show();
+}*/

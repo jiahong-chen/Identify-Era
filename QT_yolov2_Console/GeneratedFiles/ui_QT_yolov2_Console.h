@@ -33,7 +33,7 @@ public:
     QLabel *show_image_label;
     QPushButton *cfgfile_button;
     QLineEdit *line_cfg;
-    QPushButton *start_button;
+    QPushButton *start;
     QLabel *label;
 
     void setupUi(QMainWindow *QT_yolov2_ConsoleClass)
@@ -109,11 +109,11 @@ public:
 "border: 3px solid #FFFFFF;\n"
 "color: #FFFFFF"));
         line_cfg->setReadOnly(true);
-        start_button = new QPushButton(centralWidget);
-        start_button->setObjectName(QStringLiteral("start_button"));
-        start_button->setGeometry(QRect(1480, 810, 200, 100));
-        start_button->setFont(font);
-        start_button->setStyleSheet(QLatin1String("border-radius: 25px;\n"
+        start = new QPushButton(centralWidget);
+        start->setObjectName(QStringLiteral("start"));
+        start->setGeometry(QRect(1480, 810, 200, 100));
+        start->setFont(font);
+        start->setStyleSheet(QLatin1String("border-radius: 25px;\n"
 "border: 3px solid #FFFFFF;\n"
 "color: #FFFFFF"));
         label = new QLabel(centralWidget);
@@ -135,7 +135,7 @@ public:
         show_image_label->setText(QApplication::translate("QT_yolov2_ConsoleClass", "\345\275\261\345\203\217\346\252\224", Q_NULLPTR));
         cfgfile_button->setText(QApplication::translate("QT_yolov2_ConsoleClass", "\351\201\270\346\223\207\347\211\271\345\276\265\346\252\224", Q_NULLPTR));
         line_cfg->setText(QApplication::translate("QT_yolov2_ConsoleClass", "tiny-yolo-voc.cfg", Q_NULLPTR));
-        start_button->setText(QApplication::translate("QT_yolov2_ConsoleClass", "\351\226\213\345\247\213", Q_NULLPTR));
+        start->setText(QApplication::translate("QT_yolov2_ConsoleClass", "\351\226\213\345\247\213", Q_NULLPTR));
         label->setText(QApplication::translate("QT_yolov2_ConsoleClass", "\345\275\261\345\203\217\345\205\247\345\220\253\347\211\251\345\220\215\347\250\261", Q_NULLPTR));
     } // retranslateUi
 

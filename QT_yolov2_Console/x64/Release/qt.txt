@@ -1,0 +1,2 @@
+Uic'ing QT_yolov2_Console.ui...;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\\bin\uic.exe;"D:\Identify-Era\QT_yolov2_Console\QT_yolov2_Console.ui" -o ".\GeneratedFiles\ui_QT_yolov2_Console.h"
+Uic'ing QT_yolo_index.ui...;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\\bin\uic.exe;"D:\Identify-Era\QT_yolov2_Console\QT_yolo_index.ui" -o ".\GeneratedFiles\ui_QT_yolo_index.h"

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(&quot;blackboard.jpg&quot;)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>150</y>
+      <width>1270</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Spacer</family>
+      <pointsize>72</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#FFFFFF;
+background-image: url(&quot;&quot;)</string>
+    </property>
+    <property name="text">
+     <string>OBJECT DETECTION</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="train_button">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>450</y>
+      <width>500</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>48</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 55px;
+border: 10px solid #FFFFFF;
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
+    </property>
+    <property name="text">
+     <string>Train</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="detection_button">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>700</y>
+      <width>500</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>48</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 55px;
+border: 10px solid #FFFFFF;
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
+    </property>
+    <property name="text">
+     <string>Detection</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -183,7 +183,7 @@ color: #FFFFFF</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="start_button">
+   <widget class="QPushButton" name="start">
     <property name="geometry">
      <rect>
       <x>1480</x>

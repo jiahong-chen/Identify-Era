@@ -3,22 +3,10 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_QT_index.h"
 
-#include <vector>
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-#include <string>
-#include <cstdio>
-#include <math.h>
-#include <sstream>
-#include <fstream>
-#include <iomanip>
-#include <direct.h>
-#include <thread>
-#include <atomic>
-#include <io.h>
+#include "QT_yolov2_Console.h"
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include <QTextCodec>
 #include <QLabel>
 
@@ -28,9 +16,15 @@ class QT_index : public QMainWindow
 
 public:
 	QT_index(QWidget *parent = Q_NULLPTR);
-	private slots:
 
+private slots:
+	void switch_to_detection();
+	void switch_to_classifier();
+	void exit();
+	//void return_show();
 private:
 	Ui::QT_indexClass ui;
+
+	QT_yolov2_Console detection;
 };
 #pragma once

@@ -43,12 +43,18 @@ class QT_yolov2_Console : public QMainWindow
 
 public:
 	QT_yolov2_Console(QWidget *parent = Q_NULLPTR);
-	private slots:
+
+private slots:
 	void file_ck();
 	void cfgfile_ck();
 	void start();
 	void progressbar(QProgressDialog*);
+	//void receiveshow();
 
+
+/*signals:
+	void go_back();
+*/
 private:
 	Ui::QT_yolov2_ConsoleClass ui;
 

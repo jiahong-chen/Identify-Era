@@ -59,7 +59,7 @@ color: rgba(255,255,255,0.8);</string>
      <string>IDENTIFY ERA</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="detection_clk">
+   <widget class="QPushButton" name="detection_button">
     <property name="geometry">
      <rect>
       <x>710</x>
@@ -84,7 +84,7 @@ color:rgba(255,255,255,1)</string>
      <string>OBJECT DETECTION</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="classifier_clk">
+   <widget class="QPushButton" name="classifier_button">
     <property name="geometry">
      <rect>
       <x>710</x>

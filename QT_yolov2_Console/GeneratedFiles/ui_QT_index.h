@@ -26,8 +26,8 @@ class Ui_QT_indexClass
 public:
     QWidget *centralwidget;
     QLabel *label;
-    QPushButton *detection_clk;
-    QPushButton *classifier_clk;
+    QPushButton *detection_button;
+    QPushButton *classifier_button;
     QPushButton *exit;
 
     void setupUi(QMainWindow *QT_indexClass)
@@ -54,22 +54,22 @@ public:
         label->setFont(font);
         label->setStyleSheet(QLatin1String("background-image: url(\"\");\n"
 "color: rgba(255,255,255,0.8);"));
-        detection_clk = new QPushButton(centralwidget);
-        detection_clk->setObjectName(QStringLiteral("detection_clk"));
-        detection_clk->setGeometry(QRect(710, 450, 500, 130));
+        detection_button = new QPushButton(centralwidget);
+        detection_button->setObjectName(QStringLiteral("detection_button"));
+        detection_button->setGeometry(QRect(710, 450, 500, 130));
         QFont font1;
         font1.setFamily(QStringLiteral("Times New Roman"));
         font1.setPointSize(28);
-        detection_clk->setFont(font1);
-        detection_clk->setStyleSheet(QLatin1String("background-image: url(\"\");\n"
+        detection_button->setFont(font1);
+        detection_button->setStyleSheet(QLatin1String("background-image: url(\"\");\n"
 "border-radius:60px;\n"
 "border: 7px solid #FFFFFF;\n"
 "color:rgba(255,255,255,1)"));
-        classifier_clk = new QPushButton(centralwidget);
-        classifier_clk->setObjectName(QStringLiteral("classifier_clk"));
-        classifier_clk->setGeometry(QRect(710, 625, 500, 130));
-        classifier_clk->setFont(font1);
-        classifier_clk->setStyleSheet(QLatin1String("background-image: url(\"\");\n"
+        classifier_button = new QPushButton(centralwidget);
+        classifier_button->setObjectName(QStringLiteral("classifier_button"));
+        classifier_button->setGeometry(QRect(710, 625, 500, 130));
+        classifier_button->setFont(font1);
+        classifier_button->setStyleSheet(QLatin1String("background-image: url(\"\");\n"
 "border-radius:60px;\n"
 "border: 7px solid #FFFFFF;\n"
 "color:rgba(255,255,255,1)"));
@@ -92,8 +92,8 @@ public:
     {
         QT_indexClass->setWindowTitle(QApplication::translate("QT_indexClass", "Identify Era", Q_NULLPTR));
         label->setText(QApplication::translate("QT_indexClass", "IDENTIFY ERA", Q_NULLPTR));
-        detection_clk->setText(QApplication::translate("QT_indexClass", "OBJECT DETECTION", Q_NULLPTR));
-        classifier_clk->setText(QApplication::translate("QT_indexClass", "OBJECT CLASSIFIER", Q_NULLPTR));
+        detection_button->setText(QApplication::translate("QT_indexClass", "OBJECT DETECTION", Q_NULLPTR));
+        classifier_button->setText(QApplication::translate("QT_indexClass", "OBJECT CLASSIFIER", Q_NULLPTR));
         exit->setText(QApplication::translate("QT_indexClass", "EXIT", Q_NULLPTR));
     } // retranslateUi
 
