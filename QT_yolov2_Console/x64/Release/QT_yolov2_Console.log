@@ -1,9 +1,5 @@
-﻿  Uic'ing QT_yolov2_Console.ui...
-  Uic'ing QT_yolo_index.ui...
-  main.cpp
-  QT_index.cpp
-  QT_yolov2_Console.cpp
-  QT_yolo_index.cpp
-  moc_QT_yolov2_Console.cpp
+﻿  Moc'ing QT_Index.h...
   moc_QT_Index.cpp
+  QT_index.cpp
+  main.cpp
   QT_yolov2_Console.vcxproj -> D:\Identify-Era\x64\Release\QT_yolov2_Console.exe

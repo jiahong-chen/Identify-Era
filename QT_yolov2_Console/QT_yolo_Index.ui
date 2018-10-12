@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>QT_yolo_IndexClass</class>
+ <widget class="QMainWindow" name="QT_yolo_IndexClass">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -44,7 +44,7 @@ background-image: url(&quot;&quot;)</string>
     <property name="geometry">
      <rect>
       <x>710</x>
-      <y>450</y>
+      <y>400</y>
       <width>500</width>
       <height>150</height>
      </rect>
@@ -69,7 +69,7 @@ background-image: url(&quot;&quot;)</string>
     <property name="geometry">
      <rect>
       <x>710</x>
-      <y>700</y>
+      <y>600</y>
       <width>500</width>
       <height>150</height>
      </rect>
@@ -88,6 +88,31 @@ background-image: url(&quot;&quot;)</string>
     </property>
     <property name="text">
      <string>Detection</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="return_button">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>800</y>
+      <width>500</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>48</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 55px;
+border: 10px solid #FFFFFF;
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
+    </property>
+    <property name="text">
+     <string>Rrturn</string>
     </property>
    </widget>
   </widget>

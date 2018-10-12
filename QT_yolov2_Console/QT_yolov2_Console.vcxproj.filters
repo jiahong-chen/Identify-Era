@@ -59,12 +59,21 @@
     <ClCompile Include="QT_yolo_index.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QT_classifier_index.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QT_yolov2_Console.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="QT_Index.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QT_yolo_index.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QT_classifier_index.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -78,15 +87,13 @@
     <QtUic Include="QT_yolo_index.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="QT_classifier_index.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QT_yolov2_Console.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="QT_yolo_index.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

@@ -3,7 +3,10 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_QT_index.h"
 
-#include "QT_yolov2_Console.h"
+#include "QT_yolo_index.h"
+#include "QT_classifier_index.h"
+
+#include <thread>
 
 #include <QMainWindow>
 #include <QMessageBox>
@@ -21,10 +24,12 @@ private slots:
 	void switch_to_detection();
 	void switch_to_classifier();
 	void exit();
-	//void return_show();
+	void index_show();
+
 private:
 	Ui::QT_indexClass ui;
 
-	QT_yolov2_Console detection;
+	QT_yolo_index yolo_index;
+	QT_classifier_index classifier_index;
 };
 #pragma once

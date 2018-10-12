@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="QT_classifier_index.cpp" />
     <ClCompile Include="QT_index.cpp" />
     <ClCompile Include="QT_yolov2_Console.cpp" />
     <ClCompile Include="QT_yolo_index.cpp" />
@@ -127,6 +128,7 @@
     <QtMoc Include="QT_yolov2_Console.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="QT_classifier_index.ui" />
     <QtUic Include="QT_index.ui" />
     <QtUic Include="QT_yolov2_Console.ui" />
     <QtUic Include="QT_yolo_index.ui" />
@@ -143,7 +145,20 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="QT_yolo_index.h" />
+    <QtMoc Include="QT_yolo_index.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\opencv\opencv\build\include;.\yolo_data\src;.\GeneratedFiles;.;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include;.\GeneratedFiles\$(ConfigurationName)\.;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtGui;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtANGLE;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB</Define>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QT_classifier_index.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\opencv\opencv\build\include;.\yolo_data\src;.\GeneratedFiles;.;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include;.\GeneratedFiles\$(ConfigurationName)\.;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtGui;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtANGLE;C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB</Define>
+    </QtMoc>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

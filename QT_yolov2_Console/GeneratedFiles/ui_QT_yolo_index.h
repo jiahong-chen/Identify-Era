@@ -21,21 +21,22 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow
+class Ui_QT_yolo_IndexClass
 {
 public:
     QWidget *centralwidget;
     QLabel *label;
     QPushButton *train_button;
     QPushButton *detection_button;
+    QPushButton *return_button;
 
-    void setupUi(QMainWindow *MainWindow)
+    void setupUi(QMainWindow *QT_yolo_IndexClass)
     {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1920, 1080);
-        MainWindow->setStyleSheet(QStringLiteral("background-image: url(\"blackboard.jpg\")"));
-        centralwidget = new QWidget(MainWindow);
+        if (QT_yolo_IndexClass->objectName().isEmpty())
+            QT_yolo_IndexClass->setObjectName(QStringLiteral("QT_yolo_IndexClass"));
+        QT_yolo_IndexClass->resize(1920, 1080);
+        QT_yolo_IndexClass->setStyleSheet(QStringLiteral("background-image: url(\"blackboard.jpg\")"));
+        centralwidget = new QWidget(QT_yolo_IndexClass);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
@@ -48,7 +49,7 @@ public:
 "background-image: url(\"\")"));
         train_button = new QPushButton(centralwidget);
         train_button->setObjectName(QStringLiteral("train_button"));
-        train_button->setGeometry(QRect(710, 450, 500, 150));
+        train_button->setGeometry(QRect(710, 400, 500, 150));
         QFont font1;
         font1.setFamily(QStringLiteral("Times New Roman"));
         font1.setPointSize(48);
@@ -59,31 +60,40 @@ public:
 "background-image: url(\"\")"));
         detection_button = new QPushButton(centralwidget);
         detection_button->setObjectName(QStringLiteral("detection_button"));
-        detection_button->setGeometry(QRect(710, 700, 500, 150));
+        detection_button->setGeometry(QRect(710, 600, 500, 150));
         detection_button->setFont(font1);
         detection_button->setStyleSheet(QLatin1String("border-radius: 55px;\n"
 "border: 10px solid #FFFFFF;\n"
 "color: #FFFFFF;\n"
 "background-image: url(\"\")"));
-        MainWindow->setCentralWidget(centralwidget);
+        return_button = new QPushButton(centralwidget);
+        return_button->setObjectName(QStringLiteral("return_button"));
+        return_button->setGeometry(QRect(710, 800, 500, 150));
+        return_button->setFont(font1);
+        return_button->setStyleSheet(QLatin1String("border-radius: 55px;\n"
+"border: 10px solid #FFFFFF;\n"
+"color: #FFFFFF;\n"
+"background-image: url(\"\")"));
+        QT_yolo_IndexClass->setCentralWidget(centralwidget);
 
-        retranslateUi(MainWindow);
+        retranslateUi(QT_yolo_IndexClass);
 
-        QMetaObject::connectSlotsByName(MainWindow);
+        QMetaObject::connectSlotsByName(QT_yolo_IndexClass);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
+    void retranslateUi(QMainWindow *QT_yolo_IndexClass)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "OBJECT DETECTION", Q_NULLPTR));
-        train_button->setText(QApplication::translate("MainWindow", "Train", Q_NULLPTR));
-        detection_button->setText(QApplication::translate("MainWindow", "Detection", Q_NULLPTR));
+        QT_yolo_IndexClass->setWindowTitle(QApplication::translate("QT_yolo_IndexClass", "MainWindow", Q_NULLPTR));
+        label->setText(QApplication::translate("QT_yolo_IndexClass", "OBJECT DETECTION", Q_NULLPTR));
+        train_button->setText(QApplication::translate("QT_yolo_IndexClass", "Train", Q_NULLPTR));
+        detection_button->setText(QApplication::translate("QT_yolo_IndexClass", "Detection", Q_NULLPTR));
+        return_button->setText(QApplication::translate("QT_yolo_IndexClass", "Rrturn", Q_NULLPTR));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
+    class QT_yolo_IndexClass: public Ui_QT_yolo_IndexClass {};
 } // namespace Ui
 
 QT_END_NAMESPACE

@@ -9,9 +9,10 @@ QT_index::QT_index(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	this->showFullScreen();
+	showFullScreen();
 
-	//connect(&detection, SIGNAL(QT_yolov2_Console::go_back), this, SLOT(return_show()));
+	connect(&yolo_index, SIGNAL(go_back()), this, SLOT(index_show()));
+	connect(&classifier_index, SIGNAL(go_back()), this, SLOT(index_show()));
 	connect(ui.detection_button, SIGNAL(clicked()), this, SLOT(switch_to_detection()));
 	connect(ui.classifier_button, SIGNAL(clicked()), this, SLOT(switch_to_classifier()));
 	connect(ui.exit, SIGNAL(clicked()), this, SLOT(exit()));
@@ -19,11 +20,12 @@ QT_index::QT_index(QWidget *parent)
 
 void QT_index::switch_to_detection() {
 	hide();
-	detection.show();
+	yolo_index.show();
 }
 
 void QT_index::switch_to_classifier() {
-	
+	hide();
+	classifier_index.show();
 }
 
 void QT_index::exit() {
@@ -31,6 +33,6 @@ void QT_index::exit() {
 	app->quit();
 }
 
-/*void QT_index::return_show() {
+void QT_index::index_show() {
 	show();
-}*/
+}
