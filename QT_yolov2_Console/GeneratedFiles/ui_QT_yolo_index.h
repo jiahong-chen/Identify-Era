@@ -83,7 +83,7 @@ public:
 
     void retranslateUi(QMainWindow *QT_yolo_IndexClass)
     {
-        QT_yolo_IndexClass->setWindowTitle(QApplication::translate("QT_yolo_IndexClass", "MainWindow", Q_NULLPTR));
+        QT_yolo_IndexClass->setWindowTitle(QApplication::translate("QT_yolo_IndexClass", "Identify Era", Q_NULLPTR));
         label->setText(QApplication::translate("QT_yolo_IndexClass", "OBJECT DETECTION", Q_NULLPTR));
         train_button->setText(QApplication::translate("QT_yolo_IndexClass", "Train", Q_NULLPTR));
         detection_button->setText(QApplication::translate("QT_yolo_IndexClass", "Detection", Q_NULLPTR));

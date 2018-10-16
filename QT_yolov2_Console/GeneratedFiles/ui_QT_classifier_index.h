@@ -83,7 +83,7 @@ public:
 
     void retranslateUi(QMainWindow *QT_classifier_IndexClass)
     {
-        QT_classifier_IndexClass->setWindowTitle(QApplication::translate("QT_classifier_IndexClass", "MainWindow", Q_NULLPTR));
+        QT_classifier_IndexClass->setWindowTitle(QApplication::translate("QT_classifier_IndexClass", "Identify Era", Q_NULLPTR));
         label->setText(QApplication::translate("QT_classifier_IndexClass", "OBJECT CLASSIFIER", Q_NULLPTR));
         train_button->setText(QApplication::translate("QT_classifier_IndexClass", "Train", Q_NULLPTR));
         classification_button->setText(QApplication::translate("QT_classifier_IndexClass", "Classification", Q_NULLPTR));

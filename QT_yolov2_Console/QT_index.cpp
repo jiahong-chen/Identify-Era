@@ -10,7 +10,6 @@ QT_index::QT_index(QWidget *parent)
 {
 	ui.setupUi(this);
 	showFullScreen();
-
 	connect(&yolo_index, SIGNAL(go_back()), this, SLOT(index_show()));
 	connect(&classifier_index, SIGNAL(go_back()), this, SLOT(index_show()));
 	connect(ui.detection_button, SIGNAL(clicked()), this, SLOT(switch_to_detection()));
@@ -19,13 +18,12 @@ QT_index::QT_index(QWidget *parent)
 }
 
 void QT_index::switch_to_detection() {
-	hide();
-	yolo_index.show();
+	yolo_index.showFullScreen();
+
 }
 
 void QT_index::switch_to_classifier() {
-	hide();
-	classifier_index.show();
+	classifier_index.showFullScreen();
 }
 
 void QT_index::exit() {
@@ -34,5 +32,5 @@ void QT_index::exit() {
 }
 
 void QT_index::index_show() {
-	show();
+	showFullScreen();
 }

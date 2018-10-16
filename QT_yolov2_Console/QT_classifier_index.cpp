@@ -9,10 +9,19 @@ QT_classifier_index::QT_classifier_index(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	showFullScreen();
+	connect(&classifier_classification, SIGNAL(go_back()), this, SLOT(classifier_index_show()));
+	connect(ui.classification_button, SIGNAL(clicked()), this, SLOT(show_classification()));
 	connect(ui.return_button, SIGNAL(clicked()), this, SLOT(send_return_signal()));
+}
+
+void QT_classifier_index::show_classification() {
+	classifier_classification.showFullScreen();
 }
 
 void QT_classifier_index::send_return_signal() {
 	emit go_back();
+}
+
+void QT_classifier_index::classifier_index_show() {
+	showFullScreen();
 }

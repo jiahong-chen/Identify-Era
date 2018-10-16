@@ -177,14 +177,12 @@ QT_yolov2_Console::QT_yolov2_Console(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	QMainWindow::showFullScreen();
 	load_yolo_ini("./yolo_data/cfgs/tiny-yolo-voc.cfg");
 	yolo_reload(0);
-
 	connect(ui.file_button, SIGNAL(clicked()), this, SLOT(file_ck()));
 	connect(ui.cfgfile_button, SIGNAL(clicked()), this, SLOT(cfgfile_ck()));
 	connect(ui.start, SIGNAL(clicked()), this, SLOT(start()));
-
+	connect(ui.return_button, SIGNAL(clicked()), this, SLOT(send_return_signal()));
 }
 
 //functions
@@ -222,7 +220,7 @@ void QT_yolov2_Console::draw_label_image() {
 	}
 }
 
-
+//init
 int QT_yolov2_Console::load_yolo_ini(string path) {
 
 	vector<string> vector = split(path, "/");	//¦r¦ê¤Á³Î
@@ -266,10 +264,6 @@ void QT_yolov2_Console::file_ck() {
 	QFileDialog myFileDialog(this);
 	QString s = myFileDialog.getOpenFileName(this, codec->toUnicode("¶}±Ò¼v¹³ÀÉ"), QDir::currentPath(), "Image files (*.png *.xpm *.jpg)\nVideo files (*.mp4 *.avi)");
 	ui.path_editline->setText(s);
-
-	/*if (s != "") {
-		yolo_main(s.toStdString());
-	}*/
 }
 
 void QT_yolov2_Console::cfgfile_ck() {
@@ -295,6 +289,10 @@ void QT_yolov2_Console::start() {
 	}
 }
 
+void QT_yolov2_Console::send_return_signal() {
+	emit go_back();
+}
+// ProgressBar
 void QT_yolov2_Console::progressbar(QProgressDialog *progressDlg) {
 	progressDlg->show();
 	progressDlg->setWindowModality(Qt::WindowModal);
@@ -321,10 +319,3 @@ void QT_yolov2_Console::progressbar(QProgressDialog *progressDlg) {
 		_sleep(10);
 	}
 }
-
-/*void QT_yolov2_Console::receiveshow() {
-	hide();
-	emit go_back;
-
-	//this->show();
-}*/

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_QT_classifier_index_t {
-    QByteArrayData data[4];
-    char stringdata0[48];
+    QByteArrayData data[6];
+    char stringdata0[90];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,11 +32,14 @@ static const qt_meta_stringdata_QT_classifier_index_t qt_meta_stringdata_QT_clas
 QT_MOC_LITERAL(0, 0, 19), // "QT_classifier_index"
 QT_MOC_LITERAL(1, 20, 7), // "go_back"
 QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 18) // "send_return_signal"
+QT_MOC_LITERAL(3, 29, 19), // "show_classification"
+QT_MOC_LITERAL(4, 49, 18), // "send_return_signal"
+QT_MOC_LITERAL(5, 68, 21) // "classifier_index_show"
 
     },
     "QT_classifier_index\0go_back\0\0"
-    "send_return_signal"
+    "show_classification\0send_return_signal\0"
+    "classifier_index_show"
 };
 #undef QT_MOC_LITERAL
 
@@ -46,7 +49,7 @@ static const uint qt_meta_data_QT_classifier_index[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -54,15 +57,19 @@ static const uint qt_meta_data_QT_classifier_index[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x06 /* Public */,
+       1,    0,   34,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   25,    2, 0x08 /* Private */,
+       3,    0,   35,    2, 0x08 /* Private */,
+       4,    0,   36,    2, 0x08 /* Private */,
+       5,    0,   37,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -75,7 +82,9 @@ void QT_classifier_index::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->go_back(); break;
-        case 1: _t->send_return_signal(); break;
+        case 1: _t->show_classification(); break;
+        case 2: _t->send_return_signal(); break;
+        case 3: _t->classifier_index_show(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -117,13 +126,13 @@ int QT_classifier_index::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 4)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 4;
     }
     return _id;
 }

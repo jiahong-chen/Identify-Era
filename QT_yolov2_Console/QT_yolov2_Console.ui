@@ -11,17 +11,17 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>QT_yolov2_Console</string>
+   <string>Identify Era</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(52, 52, 52);</string>
+   <string notr="true">background-image: url(&quot;blackboard.jpg&quot;)</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="file_button">
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>800</y>
+      <y>840</y>
       <width>350</width>
       <height>120</height>
      </rect>
@@ -35,7 +35,8 @@
     <property name="styleSheet">
      <string notr="true">border-radius: 25px;
 border: 3px solid #FFFFFF;
-color: #FFFFFF</string>
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
     </property>
     <property name="text">
      <string>選擇影像檔</string>
@@ -45,7 +46,7 @@ color: #FFFFFF</string>
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>830</y>
+      <y>870</y>
       <width>700</width>
       <height>60</height>
      </rect>
@@ -83,7 +84,8 @@ color: #FFFFFF</string>
     <property name="styleSheet">
      <string notr="true">border-radius: 3px;
 border: 3px solid #FFFFFF;
-color: #FFFFFF</string>
+color: #FFFFFF;
+</string>
     </property>
    </widget>
    <widget class="QLabel" name="show_image_label">
@@ -112,7 +114,8 @@ color: #FFFFFF</string>
     <property name="styleSheet">
      <string notr="true">border-radius: 3px;
 border: 3px solid #FFFFFF;
-color: #FFFFFF</string>
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
     </property>
     <property name="text">
      <string>影像檔</string>
@@ -145,7 +148,8 @@ color: #FFFFFF</string>
     <property name="styleSheet">
      <string notr="true">border-radius: 25px;
 border: 3px solid #FFFFFF;
-color: #FFFFFF</string>
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
     </property>
     <property name="text">
      <string>選擇特徵檔</string>
@@ -174,7 +178,7 @@ color: #FFFFFF</string>
     <property name="styleSheet">
      <string notr="true">border-radius: 5px;
 border: 3px solid #FFFFFF;
-color: #FFFFFF</string>
+color: #FFFFFF;</string>
     </property>
     <property name="text">
      <string>tiny-yolo-voc.cfg</string>
@@ -186,8 +190,8 @@ color: #FFFFFF</string>
    <widget class="QPushButton" name="start">
     <property name="geometry">
      <rect>
-      <x>1480</x>
-      <y>810</y>
+      <x>1470</x>
+      <y>730</y>
       <width>200</width>
       <height>100</height>
      </rect>
@@ -201,7 +205,8 @@ color: #FFFFFF</string>
     <property name="styleSheet">
      <string notr="true">border-radius: 25px;
 border: 3px solid #FFFFFF;
-color: #FFFFFF</string>
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
     </property>
     <property name="text">
      <string>開始</string>
@@ -223,10 +228,36 @@ color: #FFFFFF</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#FFFFFF</string>
+     <string notr="true">color:#FFFFFF;
+background-image: url(&quot;&quot;)</string>
     </property>
     <property name="text">
      <string>影像內含物名稱</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="return_button">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>860</y>
+      <width>200</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 25px;
+border: 3px solid #FFFFFF;
+color: #FFFFFF;
+background-image: url(&quot;&quot;)</string>
+    </property>
+    <property name="text">
+     <string>返回</string>
     </property>
    </widget>
   </widget>

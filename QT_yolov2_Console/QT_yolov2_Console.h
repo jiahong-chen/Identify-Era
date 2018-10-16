@@ -49,12 +49,11 @@ private slots:
 	void cfgfile_ck();
 	void start();
 	void progressbar(QProgressDialog*);
-	//void receiveshow();
+	void send_return_signal();
 
-
-/*signals:
+signals:
 	void go_back();
-*/
+
 private:
 	Ui::QT_yolov2_ConsoleClass ui;
 
