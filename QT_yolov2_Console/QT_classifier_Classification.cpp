@@ -5,8 +5,8 @@
 
 static QTextCodec *codec = QTextCodec::codecForName("Big5-ETen");	//QT解決BIG-5編碼問題
 
-static string pb_path = "./inception_data/pb/";					//pb檔路徑
-static string label_path = "./inception_data/label/";			//txt檔路徑
+static string pb_path = "./tensorflow/data/pb/";					//pb檔路徑
+static string label_path = "./tensorflow/data/label/";			//txt檔路徑
 
 static string pb[15];							//存放所有pb檔名稱
 static string label[15];						//存放所有txt檔名稱
@@ -29,7 +29,7 @@ QT_classifier_Classification::QT_classifier_Classification(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	load_pb_ini("./inception_data/pb/inception.pb");
+	load_pb_ini("./tensorflow/data/pb/inception.pb");
 	connect(ui.return_button, SIGNAL(clicked()), this, SLOT(send_return_signal()));
 	connect(ui.file_button, SIGNAL(clicked()), this, SLOT(file_ck()));
 	connect(ui.pbfile_button, SIGNAL(clicked()), this, SLOT(pbfile_ck()));
@@ -40,7 +40,6 @@ void QT_classifier_Classification::inception_main(String filename) {
 	FILE *file;
 	string pbfile;
 	string labelfile;
-	QStringList arguments;
 	QProcess *process = new QProcess();
 	pbfile = pb_path + pb[0];
 	labelfile = label_path + label[0];
@@ -140,11 +139,41 @@ void QT_classifier_Classification::pbfile_ck() {
 
 void QT_classifier_Classification::start() {
 	if (ui.path_editline->text() != "") {
-		inception_main(ui.path_editline->text().toStdString());
+		QProgressDialog *progressDlg = new QProgressDialog();
+		std::thread thread1(&QT_classifier_Classification::inception_main, this, ui.path_editline->text().toStdString());
+		progressbar(progressDlg);
+		thread1.detach();
 	} else {
 		QMessageBox Qmsg;
 		Qmsg.setText(codec->toUnicode("影像檔尚未選擇"));
 		Qmsg.exec();
+	}
+}
+
+void QT_classifier_Classification::progressbar(QProgressDialog *progressDlg) {
+	progressDlg->show();
+	progressDlg->setWindowModality(Qt::WindowModal);
+	progressDlg->setMinimumDuration(0);
+	progressDlg->setAttribute(Qt::WA_DeleteOnClose, true);
+	progressDlg->setFixedSize(400, 100);
+	progressDlg->setRange(0, 100);
+	progressDlg->setLabelText("processing...");
+	progressDlg->setStyleSheet("QProgressBar { \
+									color: #FFFFFF; \
+									background-color: #FFFFFF; \
+									border-style: outset; \
+									text-align: center; \
+									font-size: 20px; \
+									border-width: 2px; \
+									border-radius: 10px; \
+									padding: 6px; \
+								} \
+								QProgressBar::chunk { \
+									background-color: #343434; \
+								}");
+	for (int i = 0; i <= 100; i += 1) {
+		progressDlg->setValue(i);
+		_sleep(150);
 	}
 }
 

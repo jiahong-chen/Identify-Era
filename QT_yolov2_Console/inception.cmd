@@ -1,1 +1,1 @@
-activate.bat tf&python classifier.py --graph ./inception_data/pb/inception.pb --label ./inception_data/label/inception.txt --image D:/project/dataset/Basenji/Basenji_00951.jpg
+activate.bat tf&python classifier.py --graph ./tensorflow/data/pb/Flower.pb --label ./tensorflow/data/label/Flower.txt --image C:/Users/jiahong/Desktop/flower_photos/daisy/21652746_cc379e0eea_m.jpg

@@ -62,5 +62,6 @@ private:
 	void inception_main(String);
 	void show_label_list(QProcess*);
 	void draw_label_image(String);
+	void progressbar(QProgressDialog*);
 	int load_pb_ini(string);
 };

@@ -48,7 +48,6 @@ private slots:
 	void file_ck();
 	void cfgfile_ck();
 	void start();
-	void progressbar(QProgressDialog*);
 	void send_return_signal();
 
 signals:
@@ -68,4 +67,5 @@ private:
 	void show_label_list();		//list 顯示所有類別
 	int load_yolo_ini(string);	//載入yolo相關ini文件檔
 	void yolo_reload(int);		//yolo重新載入新weights
+	void progressbar(QProgressDialog*);
 };

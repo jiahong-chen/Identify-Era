@@ -68,6 +68,9 @@
     <ClCompile Include="QT_classifier_Classification.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QT_classifier_Train.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QT_yolov2_Console.h">
@@ -88,6 +91,9 @@
     <QtMoc Include="QT_yolo_Train.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="QT_classifier_Train.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QT_yolov2_Console.ui">
@@ -106,6 +112,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="QT_yolo_train.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="QT_classifier_train.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

@@ -2,3 +2,5 @@
 *.cfg
 *.names
 *.opendb
+*.pb
+*.txt
