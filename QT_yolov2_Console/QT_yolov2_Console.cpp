@@ -234,18 +234,22 @@ int QT_yolov2_Console::load_yolo_ini(string path) {
 	yolo_names[0] = file_name + ".names";
 
 	file_name = yolo_cfg_path + yolo_cfgs[0];
+	QMessageBox Qmsg;
 	if (_access(file_name.c_str(), 4) != 0) {
-		QMessageBox::information(this, "Warning", codec->toUnicode("查無指定*.cfg檔"));
+		Qmsg.setText(codec->toUnicode("查無指定*.cfg檔"));
+		Qmsg.exec();
 		return 0;
 	}
 	file_name = yolo_weights_path + yolo_weights[0];
 	if (_access(file_name.c_str(), 4) != 0) {
-		QMessageBox::information(this, "Warning", codec->toUnicode("查無指定*.weights檔"));
+		Qmsg.setText(codec->toUnicode("查無指定*.weights檔"));
+		Qmsg.exec();
 		return 0;
 	}
 	file_name = yolo_name_path + yolo_names[0];
 	if (_access(file_name.c_str(), 4) != 0) {
-		QMessageBox::information(this, "Warning", codec->toUnicode("查無指定*.names檔"));
+		Qmsg.setText(codec->toUnicode("查無指定*.names檔"));
+		Qmsg.exec();
 		return 0;
 	}
 	ui.line_cfg->setText(codec->toUnicode(yolo_cfgs[0].c_str()));
@@ -257,7 +261,9 @@ int QT_yolov2_Console::load_yolo_ini(string path) {
 void QT_yolov2_Console::file_ck() {
 	string cfg_line_str = ui.line_cfg->text().toStdString();
 	if (cfg_line_str == "") {
-		QMessageBox::information(this, "ERROR", codec->toUnicode("尚未選擇*.cfg檔"));
+		QMessageBox Qmsg;
+		Qmsg.setText(codec->toUnicode("尚未選擇*.cfg檔"));
+		Qmsg.exec();
 		return;
 	}
 
@@ -270,7 +276,6 @@ void QT_yolov2_Console::cfgfile_ck() {
 	QFileDialog myFileDialog(this);
 	QString s = myFileDialog.getOpenFileName(this, codec->toUnicode("開啟Cfg檔案"), QDir::currentPath(), "CFG files (*.cfg)");
 	ui.line_cfg->setText(s);
-	//detector->~Detector();
 	if (s != "") {
 		int check = load_yolo_ini((string)s.toStdString());
 		if (check)yolo_reload(0);
@@ -286,6 +291,11 @@ void QT_yolov2_Console::start() {
 		std::thread thread1(&QT_yolov2_Console::yolo_main, this, ui.path_editline->text().toStdString());
 		progressbar(progressDlg);
 		thread1.detach();
+	}
+	else {
+		QMessageBox Qmsg;
+		Qmsg.setText(codec->toUnicode("影像檔尚未選擇"));
+		Qmsg.exec();
 	}
 }
 

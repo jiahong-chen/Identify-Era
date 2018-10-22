@@ -69,8 +69,11 @@ public:
         path_editline->setReadOnly(true);
         listWidget = new QListWidget(centralWidget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(1400, 139, 350, 551));
-        listWidget->setFont(font);
+        listWidget->setGeometry(QRect(1400, 139, 350, 385));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
+        font2.setPointSize(16);
+        listWidget->setFont(font2);
         listWidget->setStyleSheet(QLatin1String("border-radius: 3px;\n"
 "border: 3px solid #FFFFFF;\n"
 "color: #FFFFFF;\n"
@@ -79,12 +82,12 @@ public:
         show_image_label->setObjectName(QStringLiteral("show_image_label"));
         show_image_label->setGeometry(QRect(200, 75, 1100, 450));
         show_image_label->setMaximumSize(QSize(25535, 25535));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
-        font2.setPointSize(48);
-        font2.setBold(true);
-        font2.setWeight(75);
-        show_image_label->setFont(font2);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
+        font3.setPointSize(48);
+        font3.setBold(true);
+        font3.setWeight(75);
+        show_image_label->setFont(font3);
         show_image_label->setStyleSheet(QLatin1String("border-radius: 3px;\n"
 "border: 3px solid #FFFFFF;\n"
 "color: #FFFFFF;\n"
@@ -104,12 +107,12 @@ public:
         line_pb->setObjectName(QStringLiteral("line_pb"));
         line_pb->setEnabled(true);
         line_pb->setGeometry(QRect(600, 630, 700, 60));
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
-        font3.setPointSize(20);
-        font3.setBold(true);
-        font3.setWeight(75);
-        line_pb->setFont(font3);
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
+        font4.setPointSize(14);
+        font4.setBold(true);
+        font4.setWeight(75);
+        line_pb->setFont(font4);
         line_pb->setStyleSheet(QLatin1String("border-radius: 5px;\n"
 "border: 3px solid #FFFFFF;\n"
 "color: #FFFFFF;"));
@@ -124,7 +127,7 @@ public:
 "background-image: url(\"\")"));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(1460, 70, 231, 41));
+        label->setGeometry(QRect(1427, 70, 290, 40));
         label->setFont(font);
         label->setStyleSheet(QLatin1String("color:#FFFFFF;\n"
 "background-image: url(\"\")"));
@@ -151,7 +154,7 @@ public:
         pbfile_button->setText(QApplication::translate("QT_classifier_ClassificationClass", "\351\201\270\346\223\207\346\250\241\345\236\213\346\252\224", Q_NULLPTR));
         line_pb->setText(QString());
         start->setText(QApplication::translate("QT_classifier_ClassificationClass", "\351\226\213\345\247\213", Q_NULLPTR));
-        label->setText(QApplication::translate("QT_classifier_ClassificationClass", "\345\275\261\345\203\217\345\205\247\345\220\253\347\211\251\345\220\215\347\250\261", Q_NULLPTR));
+        label->setText(QApplication::translate("QT_classifier_ClassificationClass", "\345\275\261\345\203\217\350\276\250\350\255\230\345\272\246\345\211\215TOP5", Q_NULLPTR));
         return_button->setText(QApplication::translate("QT_classifier_ClassificationClass", "\350\277\224\345\233\236", Q_NULLPTR));
     } // retranslateUi
 

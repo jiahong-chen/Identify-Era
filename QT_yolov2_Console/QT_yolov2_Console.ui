@@ -54,7 +54,7 @@ background-image: url(&quot;&quot;)</string>
     <property name="font">
      <font>
       <family>微軟正黑體</family>
-      <pointsize>14</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -170,7 +170,7 @@ background-image: url(&quot;&quot;)</string>
     <property name="font">
      <font>
       <family>微軟正黑體</family>
-      <pointsize>20</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>

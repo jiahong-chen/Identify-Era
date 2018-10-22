@@ -62,10 +62,10 @@
     <ClCompile Include="QT_classifier_index.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QT_classifier_ClassificationClass.cpp">
+    <ClCompile Include="QT_yolo_Train.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QT_yolo_Train.cpp">
+    <ClCompile Include="QT_classifier_Classification.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

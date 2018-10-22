@@ -61,7 +61,7 @@ public:
         path_editline->setGeometry(QRect(600, 870, 700, 60));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
-        font1.setPointSize(14);
+        font1.setPointSize(12);
         path_editline->setFont(font1);
         path_editline->setStyleSheet(QLatin1String("border-radius: 5px;\n"
 "border: 3px solid #FFFFFF;\n"
@@ -106,7 +106,7 @@ public:
         line_cfg->setGeometry(QRect(600, 630, 700, 60));
         QFont font3;
         font3.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
-        font3.setPointSize(20);
+        font3.setPointSize(12);
         font3.setBold(true);
         font3.setWeight(75);
         line_cfg->setFont(font3);

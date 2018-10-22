@@ -27,11 +27,13 @@ public:
 	QT_yolo_Train(QWidget *parent = Q_NULLPTR);
 
 private slots:
+	void send_return_signal();
 	void getframe();
-	void on_pushButton_clicked();
+	void start();
+	void pause();
 
 signals:
-	
+	void go_back();
 
 private:
 	Ui::QT_yolo_TrainClass ui;

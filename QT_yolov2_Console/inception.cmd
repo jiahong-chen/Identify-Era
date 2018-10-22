@@ -1,0 +1,1 @@
+activate.bat tf&python classifier.py --graph ./inception_data/pb/inception.pb --label ./inception_data/label/inception.txt --image D:/project/dataset/Basenji/Basenji_00951.jpg

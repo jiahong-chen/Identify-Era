@@ -1,5 +1,9 @@
 ﻿  Uic'ing QT_yolo_train.ui...
+  moc_QT_Index.cpp
   moc_QT_yolo_Train.cpp
+  moc_QT_yolo_index.cpp
+  QT_index.cpp
   QT_yolo_Train.cpp
+  QT_yolo_index.cpp
   main.cpp
   QT_yolov2_Console.vcxproj -> D:\Identify-Era\x64\Release\QT_yolov2_Console.exe

@@ -30,6 +30,7 @@
 #include <QTimer>
 #include <QLabel>
 #include <QMessageBox>
+#include <QProcess>
 #include <QLineEdit>
 #include <QDebug>
 #include <QProgressDialog>
@@ -46,10 +47,20 @@ public:
 
 private slots:
 	void send_return_signal();
+	void file_ck();
+	void pbfile_ck();
+	void start();
 
 signals:
 	void go_back();
 
 private:
 	Ui::QT_classifier_ClassificationClass ui;
+
+	Mat draw_image;
+
+	void inception_main(String);
+	void show_label_list(QProcess*);
+	void draw_label_image(String);
+	int load_pb_ini(string);
 };

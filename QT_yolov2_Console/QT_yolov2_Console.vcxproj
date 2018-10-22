@@ -119,7 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="QT_classifier_ClassificationClass.cpp" />
+    <ClCompile Include="QT_classifier_Classification.cpp" />
     <ClCompile Include="QT_classifier_index.cpp" />
     <ClCompile Include="QT_index.cpp" />
     <ClCompile Include="QT_yolov2_Console.cpp" />
