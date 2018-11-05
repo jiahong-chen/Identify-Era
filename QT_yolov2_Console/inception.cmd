@@ -1,1 +1,1 @@
-activate.bat tf&python classifier.py --graph ./tensorflow/data/pb/inception.pb --label ./tensorflow/data/label/inception.txt --image D:/project/dog_classifier_test_dataset/Bernese_mountain_dog/Bernese_mountain_dog_01682.jpg
+activate.bat tf&python classifier.py --graph ./tensorflow/data/pb/Monky.pb --label ./tensorflow/data/label/Monky.txt --image D:/tensorflow_inception_V3/monky_classifier_validation_dataset/n1/n101.jpg
