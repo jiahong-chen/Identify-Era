@@ -40,7 +40,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         start = new QPushButton(centralwidget);
         start->setObjectName(QStringLiteral("start"));
-        start->setGeometry(QRect(860, 925, 80, 80));
+        start->setGeometry(QRect(80, 800, 80, 80));
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
         font.setPointSize(48);
@@ -52,14 +52,14 @@ public:
 "background-color: rgba(255,255,255,0);"));
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(160, 50, 1600, 800));
+        label->setGeometry(QRect(240, 0, 1440, 1080));
         label->setStyleSheet(QLatin1String("border-radius: 3px;\n"
 "border: 3px solid #FFFFFF;\n"
 "color: #FFFFFF;\n"
 "background-image: url(\"\")"));
         pause = new QPushButton(centralwidget);
         pause->setObjectName(QStringLiteral("pause"));
-        pause->setGeometry(QRect(980, 925, 80, 80));
+        pause->setGeometry(QRect(80, 925, 80, 80));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\345\276\256\350\273\237\346\255\243\351\273\221\351\253\224"));
         font1.setPointSize(22);
@@ -73,7 +73,7 @@ public:
 "background-color: rgba(255,255,255,0);"));
         return_button = new QPushButton(centralwidget);
         return_button->setObjectName(QStringLiteral("return_button"));
-        return_button->setGeometry(QRect(1610, 925, 150, 80));
+        return_button->setGeometry(QRect(1725, 925, 150, 80));
         return_button->setFont(font1);
         return_button->setStyleSheet(QLatin1String("border-radius: 20px;\n"
 "border: 3px solid #FFFFFF;\n"
@@ -81,6 +81,10 @@ public:
 "background-image: url(\"\");\n"
 "background-color: rgba(255,255,255,0);"));
         QT_yolo_TrainClass->setCentralWidget(centralwidget);
+        label->raise();
+        start->raise();
+        pause->raise();
+        return_button->raise();
 
         retranslateUi(QT_yolo_TrainClass);
 

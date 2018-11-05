@@ -11,7 +11,7 @@ QT_yolo_Train::QT_yolo_Train(QWidget *parent)
 	connect(ui.start, SIGNAL(clicked()), this, SLOT(start()));
 	connect(ui.pause, SIGNAL(clicked()), this, SLOT(pause()));
 	connect(ui.return_button, SIGNAL(clicked()), this, SLOT(send_return_signal()));
-	video = cv::VideoCapture("D:\\project\\MOV_0332.mp4");
+	video = cv::VideoCapture("./yolo_data/video/yolo_trainLogo.m4v");
 }
 
 void QT_yolo_Train::send_return_signal() {
@@ -33,8 +33,11 @@ void QT_yolo_Train::pause()
 void QT_yolo_Train::getframe()
 {
 	video >> src_frame;
-	if (!src_frame.data)
+	cvtColor(src_frame, src_frame, CV_BGR2RGB);
+	if (!src_frame.data) {
 		timer->stop();
+		video = cv::VideoCapture("./yolo_data/video/yolo_trainLogo.m4v");
+	}
 	qimg = QImage((const uchar*)src_frame.data, src_frame.cols, src_frame.rows, QImage::Format_RGB888);
 	ui.label->setPixmap(QPixmap::fromImage(qimg));
 }

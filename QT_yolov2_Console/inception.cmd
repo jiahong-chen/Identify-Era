@@ -1,1 +1,1 @@
-activate.bat tf&python classifier.py --graph ./tensorflow/data/pb/Flower.pb --label ./tensorflow/data/label/Flower.txt --image C:/Users/jiahong/Desktop/flower_photos/daisy/21652746_cc379e0eea_m.jpg
+activate.bat tf&python classifier.py --graph ./tensorflow/data/pb/inception.pb --label ./tensorflow/data/label/inception.txt --image D:/project/dog_classifier_test_dataset/Bernese_mountain_dog/Bernese_mountain_dog_01682.jpg
